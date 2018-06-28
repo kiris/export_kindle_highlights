@@ -16,7 +16,7 @@ module ExportKindleHighlights
         root_url: 'https://read.amazon.co.jp'
       )
 
-      p JSON.generate(
+     print JSON.generate(
         kindleClient.books.map { |book|
           book.highlights_from_amazon.map { |h|
             {
@@ -25,8 +25,8 @@ module ExportKindleHighlights
              "location": h.location,
              "text": h.text
             }
-          }.flatten
-        }
+          }
+        }.flatten
       )
     end
   end
