@@ -22,7 +22,7 @@ module ExportKindleHighlights
             {
               "asin": book.asin,
              "title": book.title,
-             "location": h.location,
+             "location": h.location.to_i,
              "text": h.text
             }
           }
